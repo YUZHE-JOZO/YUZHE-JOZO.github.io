@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国隧道工程技术和产品国际推广平台</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 15px;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+        }
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+        .sidebar a:hover {
+            color: #ffcc00;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+        .product-card p {
+            padding: 10px;
+            text-align: center;
+        }
+        .accordion {
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .accordion:hover {
+            background-color: #ddd;
+        }
+        .panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+        .zoom {
+            transition: transform 0.3s;
+        }
+        .zoom:hover {
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>欢迎访问中国隧道工程技术和产品国际推广平台</h1>
+    </header>
+    <nav>
+        <a href="#about">关于我们</a>
+        <a href="#products">产品展示</a>
+        <a href="#support">技术支持</a>
+        <a href="#membership">会员服务</a>
+        <a href="#news">新闻动态</a>
+        <a href="#contact">联系我们</a>
+    </nav>
+    <div class="container">
+        <div class="sidebar">
+            <h3>产品分类</h3>
+            <a href="#">镁质产品</a>
+            <a href="#">防水材料</a>
+            <a href="#">墙体保温</a>
+            <a href="#">人工草坪</a>
+            <a href="#">自动化工具</a>
+            <a href="#">工具车</a>
+            <a href="#">板材</a>
+        </div>
+        <div class="content">
+            <section id="about">
+                <h2>关于我们</h2>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <p>公司简介：介绍公司的历史、使命和愿景。</p>
+                        </div>
+                        <div class="card-back">
+                            <p>团队展示：使用卡片翻转动画展示团队成员的照片和简介。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="products">
+                <h2>产品展示</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="product1.jpg" alt="Product 1">
+                        <p>Geotextile 300g-Polyester Filament</p>
+                        <button>View More</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="product2.jpg" alt="Product 2">
+                        <p>Geotextile 215g-Polyester Filament</p>
+                        <button>View More</button>
+                    </div>
+                    <!-- Add more product cards as needed -->
+                </div>
+            </section>
+            <section id="support">
+                <h2>技术支持</h2>
+                <div class="accordion">技术文档</div>
+                <div class="panel">
+                    <p>提供技术文档的下载链接，使用悬停动画突出显示。</p>
+                </div>
+                <div class="accordion">常见问题</div>
+                <div class="panel">
+                    <p>使用手风琴动画展示常见问题和解答。</p>
+                </div>
+            </section>
+            <section id="membership">
+                <h2>会员服务</h2>
+                <p>会员权益：使用淡入动画展示会员的各种权益。</p>
+                <button class="zoom">注册入口</button>
+            </section>
+            <section id="news">
+                <h2>新闻动态</h2>
+                <p>行业新闻：使用滚动动画展示最新的行业新闻。</p>
+                <p>活动公告：使用时间轴动画展示即将举行的活动。</p>
+            </section>
+            <section id="contact">
+                <h2>联系我们</h2>
+                <form>
+                    <input type="text" placeholder="您的姓名" required>
+                    <input type="email" placeholder="您的邮箱" required>
+                    <textarea placeholder="您的留言"></textarea>
+                    <button type="submit">提交</button>
+                </form>
+                <p>地图定位：嵌入交互式地图，展示公司位置。</p>
+            </section>
+        </div>
+    </div>
+    <script>
+        // 手风琴动画
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
